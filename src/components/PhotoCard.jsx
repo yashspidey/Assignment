@@ -1,6 +1,6 @@
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
-const Photocard = ({ photo, dispatch, favourites }) => {
+const PhotoCard = ({ photo, dispatch, favourites }) => {
     const isFav = favourites.some((p) => p.id === photo.id);
 
 
@@ -24,4 +24,4 @@ const Photocard = ({ photo, dispatch, favourites }) => {
     )
 }
 
-export default Photocard
+export default PhotoCard

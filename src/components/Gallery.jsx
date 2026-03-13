@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
 import SearchBar from './SearchBar.jsx'
-import Photocard from './Photocard.jsx'
 import useFetchPhotos from '../hooks/useFetchPhotos.js'
 import favouritesReducer from '../reducers/favouritesReducer.js'
+import PhotoCard from './PhotoCard.jsx'
 
 const Gallery = () => {
 
@@ -50,7 +50,7 @@ const Gallery = () => {
             <SearchBar search={search} handleSearch={handleSearch} />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {filteredPhotos.map((photo) => (
-                    <Photocard
+                    <PhotoCard
                         key={photo.id}
                         photo={photo}
                         dispatch={dispatch}

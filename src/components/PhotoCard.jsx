@@ -1,3 +1,5 @@
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 const Photocard = ({ photo, dispatch, favourites }) => {
     const isFav = favourites.some((p) => p.id === photo.id);
 
@@ -16,7 +18,7 @@ const Photocard = ({ photo, dispatch, favourites }) => {
                     onClick={() =>
                         dispatch({ type: "TOGGLE_FAV", payload: photo })
                     }
-                >{isFav ? "❤️" : "🤍"}</button>
+                >{isFav ? <AiFillHeart /> : <AiOutlineHeart /> }</button>
             </div>
         </div>
     )
